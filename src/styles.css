@@ -2,8 +2,39 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Lexend", sans-serif;
+    letter-spacing: 0.5px;
+}
+
+:root {
+    --site-bg: #e0d8d4;
+}
+
+body {
+    background-color: var(--site-bg);
 }
 
 .mobile-image {
     width: 100%;
+}
+
+/* *image and heading container */
+.header {
+    display: grid;
+    justify-items: center;
+    position: relative;
+    text-align: center;
+}
+
+/* * "div element that wraps heading */
+.heading-cont {
+    top: 25%;
+    position: absolute;
+    width: 50%;
+}
+
+/* * "SCRABBLE DICTIONARY" HEADING  */
+.heading {
+    color: white;
+    font-size: clamp(1.25rem, 5.5vw, 3.45rem);
 }

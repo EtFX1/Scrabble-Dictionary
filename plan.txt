@@ -1,5 +1,5 @@
 CREATE HTML
-- Commit 
+- Commit ✅
 
 CREATE CSS
 Commit after each one is complete 
@@ -8,8 +8,8 @@ Create mobile version
     Style:
     - image and title container
     - search bar (without the suggestions)
-    - 
+    - word result container
+    - word information container
 
-- Commit 
 - Create desktop version 
 - Commit
