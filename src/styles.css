@@ -59,7 +59,7 @@ body {
     top: 52%;
     background-color: var(--white);
     width: clamp(8.75rem, 40%, 24.375rem);
-    height: clamp(40px, 14%, 50px);
+    height: clamp(40px, 10%, 50px);
 }
 
 /* *input element */
@@ -71,18 +71,20 @@ body {
     font-size: 0.625rem;
 }
 
-.search-box:focus {
-    outline: none;
+.search-box,
+.search-box::placeholder {
+    font-size: 0.6rem;
 }
 
-.search-box::placeholder {
-    font-size: 0.625rem;
+.search-box:focus {
+    outline: none;
 }
 
 button {
     border: none;
 }
 
+/* *brown background around grey button */
 .search-button {
     background-color: var(--light-brown);
     width: 25%;
@@ -92,4 +94,35 @@ button {
 
 ::-webkit-search-cancel-button {
     display: none;
+}
+
+@media (min-width: 62.5rem) {
+    /* * "div element that wraps heading */
+    .heading-cont {
+        top: 30%;
+    }
+
+    /* * "SCRABBLE DICTIONARY" HEADING  */
+    .heading {
+        font-size: 2.4rem;
+    }
+
+    /* *<form> element*/
+
+    .search-bar {
+        top: 55%;
+        height: 55px;
+    }
+
+    /* *input element */
+
+    .search-box,
+    .search-box::placeholder {
+        font-size: 0.8rem;
+    }
+
+    /* *brown background around grey button */
+    .search-button {
+        max-width: 60px;
+    }
 }
