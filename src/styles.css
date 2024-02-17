@@ -8,6 +8,7 @@
 
 :root {
     --light-brown: #e0d8d4;
+    --slightly-darker-brown: #463335;
     --white: white;
 }
 
@@ -16,13 +17,7 @@
 }
 
 body {
-    height: 100vh;
     background-color: var(--light-brown);
-}
-
-.main-container {
-    display: grid;
-    justify-items: center;
 }
 
 .mobile-image {
@@ -65,14 +60,16 @@ body {
 /* *input element */
 .search-box {
     padding-left: clamp(0.9375rem, 10%, 1.25rem);
-    width: 70%;
+    width: 100%;
     height: 100%;
     border: none;
     font-size: 0.625rem;
+    color: var(--slightly-darker-brown);
 }
 
 .search-box,
 .search-box::placeholder {
+    font-weight: 300;
     font-size: clamp(10px, 2.2vw, 14px);
 }
 
@@ -92,10 +89,38 @@ button {
     height: 100%;
 }
 
+/* todo: style later */
 ::-webkit-search-cancel-button {
     display: none;
 }
 
+.main-container {
+    min-height: 100vh;
+    margin-top: 60px;
+}
+
+/* *in dictionary and not in dictionary <article> containers */
+.result {
+    margin: auto;
+    text-align: center;
+    width: 65%;
+    max-width: 230px;
+}
+
+.not-in-dict-pic,
+.in-dict-pic {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.not-in-dict-par,
+.in-dict-par {
+    color: var(--slightly-darker-brown);
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+/* 1000px */
 @media (min-width: 62.5rem) {
     /* * "div element that wraps heading */
     .heading-cont {
@@ -118,7 +143,7 @@ button {
 
     .search-box,
     .search-box::placeholder {
-        /* font-size: 1rem; */
+        font-size: 1rem;
     }
 
     /* *brown background around grey button */
