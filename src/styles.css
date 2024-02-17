@@ -54,7 +54,7 @@ body {
     top: 52%;
     background-color: var(--white);
     width: clamp(8.75rem, 40%, 24.375rem);
-    height: clamp(40px, 10%, 50px);
+    height: clamp(2.5rem, 10%, 3.125rem);
 }
 
 /* *input element */
@@ -70,7 +70,7 @@ body {
 .search-box,
 .search-box::placeholder {
     font-weight: 300;
-    font-size: clamp(10px, 2.2vw, 14px);
+    font-size: clamp(0.625rem, 2.2vw, 0.875rem);
 }
 
 .search-box:focus {
@@ -96,21 +96,25 @@ button {
 
 .main-container {
     min-height: 100vh;
-    margin-top: 60px;
+    margin-top: 3.75rem;
+}
+
+.result,
+.word-and-audio-cont {
+    margin: auto;
 }
 
 /* *in dictionary and not in dictionary <article> containers */
 .result {
-    margin: auto;
     text-align: center;
     width: 65%;
-    max-width: 230px;
+    max-width: 14.375rem;
 }
 
 .not-in-dict-pic,
 .in-dict-pic {
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
 }
 
 .not-in-dict-par,
@@ -120,7 +124,32 @@ button {
     font-weight: 300;
 }
 
-/* 1000px */
+.word-and-audio-cont {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 35.9375rem;
+}
+
+.word {
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+.phonetic {
+    color: var(--slightly-darker-brown);
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    font-weight: 300;
+}
+
+.audio-btn {
+    background: none;
+    align-self: flex-start;
+    margin-top: 0.4375rem;
+}
+
+/* 62.5rem */
 @media (min-width: 62.5rem) {
     /* * "div element that wraps heading */
     .heading-cont {
@@ -136,7 +165,7 @@ button {
 
     .search-bar {
         top: 55%;
-        height: 55px;
+        height: 3.4375rem;
     }
 
     /* *input element */
@@ -148,6 +177,6 @@ button {
 
     /* *brown background around grey button */
     .search-button {
-        max-width: 60px;
+        max-width: 3.75rem;
     }
 }
