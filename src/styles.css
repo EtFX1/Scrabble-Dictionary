@@ -20,6 +20,16 @@ body {
     background-color: var(--light-brown);
 }
 
+button {
+    border: none;
+}
+
+.main-container {
+    min-height: 100vh;
+    margin-top: 3.75rem;
+}
+
+/* @!IMAGE AND HEADER SECTION */
 .mobile-image {
     width: 100%;
 }
@@ -77,10 +87,6 @@ body {
     outline: none;
 }
 
-button {
-    border: none;
-}
-
 /* *brown background around grey button */
 .search-button {
     background-color: var(--light-brown);
@@ -94,18 +100,17 @@ button {
     display: none;
 }
 
-.main-container {
-    min-height: 100vh;
-    margin-top: 3.75rem;
-}
-
-.result,
+.not-in-dict-cont,
+.in-dict-cont,
 .word-and-audio-cont {
     margin: auto;
 }
 
+/* @! WORD RESULT (IN DICTIONARY OR NOT IN DICTIONARY) */
+
 /* *in dictionary and not in dictionary <article> containers */
-.result {
+.not-in-dict-cont,
+.in-dict-cont {
     text-align: center;
     width: 65%;
     max-width: 14.375rem;
@@ -117,18 +122,29 @@ button {
     margin-bottom: 1.875rem;
 }
 
-.not-in-dict-par,
-.in-dict-par {
+/* *targets the paragraphs below the pictures of the results */
+.results-par {
     color: var(--slightly-darker-brown);
     font-size: 1.2rem;
     font-weight: 300;
 }
+
+.in-dict-par {
+    margin-bottom: 1.0625rem;
+}
+
+.points {
+    font-size: 1.125rem;
+}
+
+/* @!WORD INFORMATION (DEFINITION, SYNONYMS AND ANTONYMS) */
 
 .word-and-audio-cont {
     display: flex;
     justify-content: space-between;
     width: 90%;
     max-width: 35.9375rem;
+    margin-bottom: 46px;
 }
 
 .word {

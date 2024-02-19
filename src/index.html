@@ -94,30 +94,31 @@
 
         <!-- @!word result container ( whether it's in the dictionary or not)-->
         <main class="main-container">
-            <!-- !not in dictionary image -->
-            <article class="result display-none">
+            <!-- !not in dictionary container -->
+            <article class="not-in-dict-cont display-none">
                 <img
                     class="not-in-dict-pic"
                     src="/images/NotInDictionary .png"
                     alt="not in dictionary"
                 />
-                <p class="not-in-dict-par">
+                <p class="results-par not-in-dict-par">
                     Sorry, the word you're looking for is not in the scrabble
                     dictionary
                 </p>
             </article>
 
-            <!-- ! in dictionary image -->
-            <article class="result display-none">
+            <!-- ! in dictionary container -->
+            <article class="in-dict-cont display-none">
                 <img
                     class="in-dict-pic"
                     src="/images/InDictionary.png"
                     alt="in dictionary"
                 />
-                <p class="in-dict-par">
+                <p class="results-par in-dict-par">
                     The word <strong></strong> is in the scrabble dictionary!
                     <a href=""> Click here</a> to define it
                 </p>
+                <p class="results-par points">VALUE: <strong></strong>POINTS</p>
             </article>
 
             <!-- @! Word information -->
@@ -146,7 +147,7 @@
                     </button>
                 </div>
 
-                <!-- ! word definition, synonyms and antonyms container -->
+                <!-- ! Word definition, synonyms and antonyms container -->
                 <div class="word-info">
                     <!-- *definition -->
                     <section class="definition">
