@@ -4,11 +4,13 @@
     box-sizing: border-box;
     font-family: "Lexend", sans-serif;
     letter-spacing: 0.5px;
+    font-weight: 300;
 }
 
 :root {
     --light-brown: #e0d8d4;
     --slightly-darker-brown: #463335;
+    --darkest-brown: #412c2a;
     --white: white;
 }
 
@@ -25,6 +27,8 @@ button {
 }
 
 .main-container {
+    display: grid;
+    place-items: center;
     min-height: 100vh;
     margin-top: 3.75rem;
 }
@@ -52,6 +56,7 @@ button {
 
 /* * "SCRABBLE DICTIONARY" HEADING  */
 .heading {
+    font-weight: 700;
     color: var(--white);
     font-size: clamp(1.25rem, 5.5vw, 3.45rem);
 }
@@ -73,13 +78,11 @@ button {
     width: 100%;
     height: 100%;
     border: none;
-    font-size: 0.625rem;
     color: var(--slightly-darker-brown);
 }
 
 .search-box,
 .search-box::placeholder {
-    font-weight: 300;
     font-size: clamp(0.625rem, 2.2vw, 0.875rem);
 }
 
@@ -100,13 +103,12 @@ button {
     display: none;
 }
 
-.not-in-dict-cont,
-.in-dict-cont,
-.word-and-audio-cont {
-    margin: auto;
-}
-
 /* @! WORD RESULT (IN DICTIONARY OR NOT IN DICTIONARY) */
+
+/* *holds all info about the word (the word itself, phonetic, audio, definitions, etc) */
+.word-info-container {
+    width: 85%;
+}
 
 /* *in dictionary and not in dictionary <article> containers */
 .not-in-dict-cont,
@@ -126,7 +128,6 @@ button {
 .results-par {
     color: var(--slightly-darker-brown);
     font-size: 1.2rem;
-    font-weight: 300;
 }
 
 .in-dict-par {
@@ -142,7 +143,6 @@ button {
 .word-and-audio-cont {
     display: flex;
     justify-content: space-between;
-    width: 90%;
     max-width: 35.9375rem;
     margin-bottom: 46px;
 }
@@ -156,7 +156,6 @@ button {
     color: var(--slightly-darker-brown);
     font-size: 1rem;
     margin-top: 0.5rem;
-    font-weight: 300;
 }
 
 .audio-btn {
@@ -165,7 +164,67 @@ button {
     margin-top: 0.4375rem;
 }
 
-/* 62.5rem */
+/* @! WORD INFO */
+
+/* todo: 2. make into a grid container */
+.word-details-cont {
+    /* border: 1px solid; */
+}
+
+/* todo: 1. immediately apply to all 3 */
+
+/* !CONTAINERS */
+.detail-cont {
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.34);
+    border-left: 0.5625rem solid #463335;
+    padding: 1.8125rem;
+    margin-bottom: 2rem;
+}
+
+.detail-header {
+    font-weight: 400;
+    font-size: 1.125rem;
+    margin-bottom: 0.25rem;
+    color: var(--darkest-brown);
+}
+
+.part-of-speech,
+.definition,
+.example {
+    font-size: 0.8rem;
+}
+
+ul {
+    margin-top: 0.8rem;
+    margin-left: 1rem;
+}
+
+li {
+    margin-bottom: 3px;
+    font-size: 13.5px;
+}
+
+.part-of-speech {
+    margin-bottom: 0.9375rem;
+}
+
+.definition {
+    margin-bottom: 0.875rem;
+}
+
+.example {
+    font-family: "Poppins", sans-serif;
+    font-style: italic;
+    color: var(--slightly-darker-brown);
+}
+
+/* *searched word in the example */
+b {
+    font-weight: 400;
+}
+
+/* 1000px */
 @media (min-width: 62.5rem) {
     /* * "div element that wraps heading */
     .heading-cont {

@@ -11,6 +11,10 @@
             href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap"
             rel="stylesheet"
         />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap"
+            rel="stylesheet"
+        />
         <!-- @!FAVICON -->
         <link
             rel="icon"
@@ -148,15 +152,13 @@
                 </div>
 
                 <!-- ! Word definition, synonyms and antonyms container -->
-                <div class="word-info">
+                <div class="word-details-cont">
                     <!-- *definition -->
-                    <section class="definition">
-                        <!-- *decoration -->
-                        <div></div>
+                    <section class="detail-cont definition-cont">
+                        <h4 class="detail-header">Definition</h4>
 
-                        <h4>Definition</h4>
-                        <!-- *figure of speech -->
-                        <p></p>
+                        <!-- *part of speech -->
+                        <p class="part-of-speech">adjective</p>
 
                         <!-- *definition -->
                         <p class="definition">
@@ -166,18 +168,16 @@
                         </p>
 
                         <!-- *example -->
+                        <!-- todo: somehow find the word in this example and make it bold -->
                         <p class="example">
-                            "I haven't been totally <strong></strong> with you"
+                            "I haven't been totally <b>honest</b> with you"
                         </p>
                     </section>
 
                     <!-- *synonyms -->
-                    <section class="synonmys">
+                    <section class="detail-cont">
                         <!-- *decoration -->
-                        <div></div>
-
-                        <!-- *decoration -->
-                        <h4>Synonyms</h4>
+                        <h4 class="detail-header">Synonyms</h4>
 
                         <ul>
                             <li>Outspoken</li>
@@ -189,11 +189,11 @@
                     </section>
 
                     <!-- *antonyms -->
-                    <section class="antonyms">
+                    <section class="detail-cont">
                         <!-- *decoration -->
                         <div></div>
 
-                        <h4>Antonyms</h4>
+                        <h4 class="detail-header">Antonyms</h4>
                         <ul>
                             <li>Dishonest</li>
                             <li>Lying</li>
