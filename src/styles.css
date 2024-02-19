@@ -28,7 +28,8 @@ button {
 
 .main-container {
     display: grid;
-    place-items: center;
+    justify-content: center;
+    align-content: center;
     min-height: 100vh;
     margin-top: 3.75rem;
 }
@@ -140,10 +141,14 @@ button {
 
 /* @!WORD INFORMATION (DEFINITION, SYNONYMS AND ANTONYMS) */
 
+.word-and-audio-cont,
+.word-details-cont {
+    max-width: 40rem;
+}
+
 .word-and-audio-cont {
     display: flex;
     justify-content: space-between;
-    max-width: 35.9375rem;
     margin-bottom: 46px;
 }
 
@@ -164,22 +169,16 @@ button {
     margin-top: 0.4375rem;
 }
 
-/* @! WORD INFO */
-
-/* todo: 2. make into a grid container */
-.word-details-cont {
-    /* border: 1px solid; */
-}
-
 /* todo: 1. immediately apply to all 3 */
 
-/* !CONTAINERS */
+/* *targets the definition, antonyms and synonyms container */
 .detail-cont {
     margin: auto;
     background-color: rgba(255, 255, 255, 0.34);
     border-left: 0.5625rem solid #463335;
-    padding: 1.8125rem;
     margin-bottom: 2rem;
+    width: 100%;
+    padding: 1.8125rem;
 }
 
 .detail-header {
@@ -202,7 +201,7 @@ ul {
 
 li {
     margin-bottom: 3px;
-    font-size: 13.5px;
+    font-size: 13px;
 }
 
 .part-of-speech {
@@ -253,5 +252,31 @@ b {
     /* *brown background around grey button */
     .search-button {
         max-width: 3.75rem;
+    }
+
+    .word-details-cont {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 44px;
+        grid-template-areas:
+            "definition definition"
+            "synonyms antonyms";
+    }
+
+    .detail-cont {
+        margin-bottom: 0;
+    }
+
+    .definition-cont {
+        grid-area: definition;
+    }
+
+    .synonym-cont {
+        grid-area: synonyms;
+    }
+
+    .antonym-cont {
+        grid-area: antonyms;
     }
 }
