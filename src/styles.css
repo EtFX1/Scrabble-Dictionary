@@ -3,8 +3,9 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Lexend", sans-serif;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.0313rem;
     font-weight: 300;
+    line-height: 1.45;
 }
 
 :root {
@@ -27,9 +28,6 @@ button {
 }
 
 .main-container {
-    display: grid;
-    justify-content: center;
-    align-content: center;
     min-height: 100vh;
     margin-top: 3.75rem;
 }
@@ -106,11 +104,6 @@ button {
 
 /* @! WORD RESULT (IN DICTIONARY OR NOT IN DICTIONARY) */
 
-/* *holds all info about the word (the word itself, phonetic, audio, definitions, etc) */
-.word-info-container {
-    width: 85%;
-}
-
 /* *in dictionary and not in dictionary <article> containers */
 .not-in-dict-cont,
 .in-dict-cont {
@@ -141,15 +134,18 @@ button {
 
 /* @!WORD INFORMATION (DEFINITION, SYNONYMS AND ANTONYMS) */
 
-.word-and-audio-cont,
-.word-details-cont {
+/* *holds all info about the word (the word itself, phonetic, audio, definitions, etc) */
+
+.word-info-cont {
+    margin: auto;
+    width: 80%;
     max-width: 40rem;
 }
 
 .word-and-audio-cont {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 46px;
+    margin-bottom: 2.875rem;
 }
 
 .word {
@@ -168,8 +164,6 @@ button {
     align-self: flex-start;
     margin-top: 0.4375rem;
 }
-
-/* todo: 1. immediately apply to all 3 */
 
 /* *targets the definition, antonyms and synonyms container */
 .detail-cont {
@@ -200,8 +194,8 @@ ul {
 }
 
 li {
-    margin-bottom: 3px;
-    font-size: 13px;
+    line-height: 1.5;
+    font-size: 0.8125rem;
 }
 
 .part-of-speech {
@@ -253,12 +247,11 @@ b {
     .search-button {
         max-width: 3.75rem;
     }
-
     .word-details-cont {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        gap: 44px;
+        gap: 2.75rem;
         grid-template-areas:
             "definition definition"
             "synonyms antonyms";
