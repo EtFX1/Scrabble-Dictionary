@@ -33,8 +33,7 @@
         <script defer src="search_bar.js"></script>
     </head>
     <body>
-        <!-- @!image and title header -->
-
+        <!-- @!header (with image and title) -->
         <div class="image-and-search-bar-cont">
             <header class="header">
                 <!-- *image(s) -->
@@ -87,18 +86,33 @@
                     </button>
                 </form>
 
-                <div class="suggestions-cont hide-history-icons">
-                    <ul class="search-suggestions">
+                <!-- !search suggestions -->
+                <div class="suggestions-cont display-none hide-history-icons">
+                    <!-- <ul class="search-suggestions">
                         <li>
                             <span class="search-suggestion left-0">Honest</span>
                         </li>
-                    </ul>
+                    </ul> -->
                 </div>
             </div>
         </div>
 
         <!-- @!word result container (whether it's in the dictionary or not)-->
         <main class="main-container">
+            <!-- @!default t -->
+            <article class="default-display-cont">
+                <img
+                    class="default-pic"
+                    src="/images/intro-image.png"
+                    alt="not in dictionary"
+                />
+                <p class="mini-message welcome-message">
+                    Welcome to the Scrabble Dictionary!
+                </p>
+                <a href="" class="mini-message search-cta"
+                    ><b>Search for a word</b></a
+                >
+            </article>
             <!-- !not in dictionary container -->
             <article class="not-in-dict-cont display-none">
                 <img
@@ -106,7 +120,7 @@
                     src="/images/NotInDictionary .png"
                     alt="not in dictionary"
                 />
-                <p class="results-par not-in-dict-par">
+                <p class="mini-message not-in-dict-par">
                     Sorry, the word you're looking for is not in the scrabble
                     dictionary
                 </p>
@@ -119,16 +133,18 @@
                     src="/images/InDictionary.png"
                     alt="in dictionary"
                 />
-                <p class="results-par in-dict-par">
+                <p class="mini-message in-dict-par">
                     The word <strong></strong> is in the scrabble dictionary!
                     <a href=""> Click here</a> to define it
                 </p>
-                <p class="results-par points">VALUE: <strong></strong>POINTS</p>
+                <p class="mini-message points">
+                    VALUE: <strong></strong>POINTS
+                </p>
             </article>
 
             <!-- @! Word information -->
 
-            <article class="word-info-cont">
+            <article class="word-info-cont display-none">
                 <!-- !Word, phonetics and audio button -->
                 <div class="word-and-audio-cont">
                     <div class="word-and-phonetic">
