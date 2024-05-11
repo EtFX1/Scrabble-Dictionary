@@ -1,11 +1,14 @@
 import { getWordData } from './retrieve_words.js';
 
-
+const form = document.querySelector("form");
 const searchBox = document.querySelector(".search-box");
 const suggestionsCont = document.querySelector(".suggestions-cont");
 
 //function that displays search suggestions when the user starts typing
 searchBox.onkeyup = async function () {
+
+    suggestionsCont.classList.remove("display-none"); //makes the box visible
+
     // returns the actual list of words 
     const listOfWords = await getWordData().then(words => words);
 
@@ -37,5 +40,22 @@ searchBox.onkeyup = async function () {
 
     convertToHTML(trimmedList);
 }
+
+
+form.addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevents the page from reloading
+    console.log("submitted");
+});
+
+// remves the search box when it's out of focus
+searchBox.addEventListener("blur", function () {
+    suggestionsCont.classList.add("display-none");
+});
+
+
+
+
+
+
 
 
