@@ -1,28 +1,41 @@
-//function that retrieves the scrabble words from the dictionary
-async function getWordData() {
+import { getWordData } from './retrieve_words.js';
 
-    try {
-        const responseObject = await fetch("../dictionary-words.txt"); //returns Response object 
-        const words = await responseObject.text(); //returns words as a string
 
-        //todo: use a try catch block
-        const array = words.split("\n"); //splitting the data into a list
+const searchBox = document.querySelector(".search-box");
+const suggestionsCont = document.querySelector(".suggestions-cont");
 
-        return Promise.resolve(array);
+//function that displays search suggestions when the user starts typing
+searchBox.onkeyup = async function () {
+    // returns the actual list of words 
+    const listOfWords = await getWordData().then(words => words);
+
+    let filteredList = []; // to store all the filtered keywords
+    let input = searchBox.value.toLowerCase(); // to store user input
+
+    // if statement to check whether there's anything in the search box before filtering can begin
+    if (input.length) {
+
+        //filter function filters the list of words by the characters typed
+        filteredList = listOfWords.filter((characters_typed) => {
+            //returns true if the "character_typed" starts with the input
+            const inWord = characters_typed.toLowerCase().startsWith(input);
+            return inWord;
+        });
     }
 
-    catch (error) {
-        console.log(error);
+    const trimmedList = filteredList.slice(0, 5); // only storing the first 5 words from the list
+
+    //converts each list element in the "filteredList" into an html list item 
+    function convertToHTML(trimmedList) {
+
+        //the map function takes every word in the "filteredList" and converts it to the HTML seen below
+        const listItems = trimmedList.map((word) => {
+            return `<li><span class="search-suggestion left-0">${word}</span></li>`;
+        });
+        suggestionsCont.innerHTML = `<ul class="search-suggestions">${listItems.join("")}</ul>`;
     }
+
+    convertToHTML(trimmedList);
 }
-
-// retrieves
-getWordData().then(array => console.log(array))
-
-
-
-
-
-
 
 

@@ -30,7 +30,8 @@
         <!-- @!CSS LINK -->
         <link rel="stylesheet" href="styles.css" />
         <!-- @!Javascript link(s) -->
-        <script defer src="search_bar.js"></script>
+        <script defer type="module" src="retrieve_words.js"></script>
+        <script defer type="module" src="search_bar.js"></script>
     </head>
     <body>
         <!-- @!header (with image and title) -->
@@ -87,15 +88,21 @@
                 </form>
 
                 <!-- !search suggestions -->
-                <div class="suggestions-cont display-none hide-history-icons">
-                    <!-- <ul class="search-suggestions">
+                <div class="suggestions-cont hide-history-icons"></div>
+            </div>
+        </div>
+
+        <!-- <ul class="search-suggestions">
+                        <li>
+                            <span class="search-suggestion left-0">Honest</span>
+                        </li>
+                        <li>
+                            <span class="search-suggestion left-0">Honest</span>
+                        </li>
                         <li>
                             <span class="search-suggestion left-0">Honest</span>
                         </li>
                     </ul> -->
-                </div>
-            </div>
-        </div>
 
         <!-- @!word result container (whether it's in the dictionary or not)-->
         <main class="main-container">
